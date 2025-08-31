@@ -43,27 +43,42 @@
     .dark{ --bg1:#0f172a; --bg2:#1f2937; --card:rgba(255,255,255,.08); --ink:#e5e7eb }
 .btn{margin:6px 6px 0 0}.btn.wh{background:#25D366;color:#fff}
 
+    
+nav.menu{
+  display:flex; gap:12px; justify-content:center; align-items:center; flex-wrap:wrap;
+}
+nav.menu a{
+  color:#fff; text-decoration:none; font-weight:700; opacity:.95;
+  padding:6px 10px; border-radius:10px;
+}
+nav.menu a:hover{ background:rgba(255,255,255,.15) }
+
+.menu-btn{
+  padding:6px 10px; border-radius:10px; border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.12); color:#fff; font-weight:700; cursor:pointer;
+}
+.menu-btn:hover{ background:rgba(255,255,255,.2) }
+
+@media (max-width:640px){
+  nav.menu{ gap:8px; }
+}
+
   </style>
 </head>
 <body>
   <header>
     <h1>İlay Çolak</h1>
     <p>HTML • CSS • JavaScript ile modern ve hızlı web siteleri</p>
-    <nav>
-      <a href="#projeler">Projeler</a>
-      <a href="#hakkimda">Hakkımda</a>
-      <a href="#iletisim">İletişim</a>
-      <a href="#paketler">Paketler</a>
-      <a href="#surec">Süreç</a>
-      <a href="#sss">SSS</a>
-      
-      <button id="themeToggle" style="background:#fff;color:#7a5ac8;border:0;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer">
-  🌙
-</button>
-    <img src="og.jpg" alt="" style="width:32px;height:32px;border-radius:50%;object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,.15)">
+    <nav class="menu">
+  <a href="#projeler">Projeler</a>
+  <a href="#hakkimda">Hakkımda</a>
+  <a href="#iletisim">İletişim</a>
+  <a href="#paketler">Paketler</a>
+  <a href="#surec">Süreç</a>
+  <a href="#sss">SSS</a>
+  <button id="themeToggle" class="menu-btn" aria-label="Tema değiştir">🌙</button>
+</nav>
 
-
-    </nav>
   </header>
 
   <!-- PROJELER -->
