@@ -37,6 +37,10 @@
       <a href="#hakkimda">Hakkımda</a>
       <a href="#iletisim">İletişim</a>
       <a href="#paketler">Paketler</a>
+      <button id="themeToggle" style="background:#fff;color:#7a5ac8;border:0;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer">
+  🌙
+</button>
+
     </nav>
   </header>
 
@@ -164,6 +168,20 @@
   </main>
 
    
+<script>
+  const KEY='theme';
+  const btn=document.getElementById('themeToggle');
+  if(localStorage.getItem(KEY)==='dark'){ document.body.classList.add('dark'); }
+  function setIcon(){ btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙'; }
+  if(btn){
+    setIcon();
+    btn.onclick=()=>{
+      document.body.classList.toggle('dark');
+      localStorage.setItem(KEY, document.body.classList.contains('dark')?'dark':'light');
+      setIcon();
+    };
+  }
+</script>
 
   <footer>© <span id="yil"></span> İlay Çolak</footer>
   <script>document.getElementById("yil").textContent=new Date().getFullYear();</script>
