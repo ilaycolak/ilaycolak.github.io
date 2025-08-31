@@ -7,19 +7,21 @@
   <title>İlay Çolak | Web Geliştirici</title>
   <style>
     :root{--bg1:#a18cd1;--bg2:#fbc2eb;--card:rgba(255,255,255,.85);--ink:#3a3a3a}
-    *{box-sizing:border-box} body{margin:0;font-family:Arial,system-ui,-apple-system,sans-serif;
-    color:var(--ink);background:linear-gradient(135deg,var(--bg1),var(--bg2));}
-    .wrap{max-width:980px;margin:auto;padding:32px} header{color:#fff;text-align:center;padding:64px 16px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,system-ui,-apple-system,sans-serif;color:var(--ink);
+      background:linear-gradient(135deg,var(--bg1),var(--bg2))}
+    .wrap{max-width:980px;margin:auto;padding:32px}
+    header{color:#fff;text-align:center;padding:64px 16px}
     header h1{margin:0;font-size:42px;text-shadow:0 6px 20px rgba(0,0,0,.25)}
     header p{opacity:.95;font-size:18px;margin-top:10px}
+    nav{display:flex;gap:12px;justify-content:center;margin-top:18px}
+    nav a{color:#fff;text-decoration:none;font-weight:700;opacity:.95}
+    nav a:hover{text-decoration:underline}
     .card{background:var(--card);backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(0,0,0,.12);
-      border-radius:16px;padding:22px}
+      border-radius:16px;padding:22px;margin:18px 0}
     .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
     .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;
       background:#fff;color:#7a5ac8;box-shadow:0 8px 18px rgba(0,0,0,.12)}
-    nav{display:flex;gap:12px;justify-content:center;margin-top:18px}
-    nav a{color:#fff;text-decoration:none;font-weight:700;opacity:.95} nav a:hover{text-decoration:underline}
-    section{margin:22px 0}
     h2{margin:0 0 10px 0}
     footer{color:#fff;text-align:center;opacity:.9;padding:32px 0}
   </style>
@@ -36,24 +38,35 @@
   </header>
 
   <main class="wrap">
+    <!-- PROJELER -->
     <section id="projeler" class="card">
       <h2>Öne Çıkan Projeler</h2>
       <div class="grid">
         <div class="card">
           <h3>İlk Web Sitem</h3>
-          <p>Pastel gradient, canlı JS efektleri. GitHub Pages’te yayın.</p>
+          <p>Pastel gradient + JS efekt.</p>
           <a class="btn" href="https://ilaycolak.github.io/first-website/" target="_blank" rel="noopener">Projeyi Gör</a>
         </div>
-        <!-- Buraya yeni projeler ekleyeceksin -->
+
+        <!-- YENİ PROJE EKLEME YERİ: Aşağıdaki bloğu kopyalayıp
+             tam BURANIN ALTINA yapıştır. .grid DIV’inin İÇİNDE kalmalı. -->
+        <!--
+        <div class="card">
+          <h3>Restoran Demo</h3>
+          <p>Tek sayfa, pastel tema, WhatsApp/Harita.</p>
+          <a class="btn" href="https://ilaycolak.github.io/restaurant-demo/" target="_blank" rel="noopener">Projeyi Gör</a>
+        </div>
+        -->
       </div>
     </section>
 
+    <!-- HAKKIMDA -->
     <section id="hakkimda" class="card">
       <h2>Hakkımda</h2>
-      <p>Sıfırdan kodlanmış, hızlı ve şık web siteleri tasarlıyorum. Küçük işletmeler için
-         tanıtım sayfaları ve portfolyo siteleri yapıyorum. Kısa sürede canlı yayına alırım.</p>
+      <p>Sıfırdan kodlanmış, hızlı ve şık web siteleri yapıyorum. Küçük işletmeler için tanıtım ve portfolyo siteleri üretiyorum.</p>
     </section>
 
+    <!-- İLETİŞİM -->
     <section id="iletisim" class="card">
       <h2>İletişim</h2>
       <p>E-posta: <a href="mailto:ilay@example.com">ilay@example.com</a></p>
@@ -61,10 +74,7 @@
     </section>
   </main>
 
-  <footer>
-    © <span id="yil"></span> İlay Çolak
-  </footer>
-
+  <footer>© <span id="yil"></span> İlay Çolak</footer>
   <script>document.getElementById("yil").textContent=new Date().getFullYear();</script>
 </body>
 </html>
